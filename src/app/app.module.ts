@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { HeaderComponent } from './shared';
+import { ContactService } from './shared/services/contact.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HeaderComponent } from './shared';
     HttpModule,
     NgbModule.forRoot()
   ],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

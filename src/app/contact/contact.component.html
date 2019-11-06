@@ -1,0 +1,23 @@
+<form [formGroup]="contactForm" (ngSubmit)="createContact()" >
+  <div class="form-group">
+      <label for="">Name: </label>
+      <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div *ngIf="name.errors" class="alert alert-danger">
+    Name is required.
+  </div>
+  <div class="form-group">
+      <label for="">email: </label>
+      <input type="text" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+      <label for="">Phone number: </label>
+      <input type="text" class="form-control" formControlName="phoneNumber">
+  </div>
+  <div class="form-group">
+      <label for="">Add to newsletter: </label>
+      <input type="checkbox" class="form-control" formControlName="shouldAddToNewsletter">
+  </div>
+  <hr>
+  <button type="submit" disabled="contactForm.errors" class="btn btn-primary">Add contact</button>
+</form>
